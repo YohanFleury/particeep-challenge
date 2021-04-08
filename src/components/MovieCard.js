@@ -23,12 +23,12 @@ export const MovieCard = () => {
                                 <Card.Body>
                                 <Card.Title> {data.title}</Card.Title>
                                 <Card.Text>
-                                    Catégorie
+                                    Catégorie : {data.category}
                                 </Card.Text>
                                 <Button variant="success"> Like </Button>
-                                <Card.Text> Nombre de likes </Card.Text>
+                                <Card.Text> Nombre de likes : {data.likes} </Card.Text>
                                 <Button variant="danger"> Dislike </Button>
-                                <Card.Text> Nombre de dislikes </Card.Text>
+                                <Card.Text> Nombre de dislikes : {data.dislikes} </Card.Text>
                                 <Card.Text> Ici la jauge like/dislike</Card.Text>
                                 </Card.Body>
                             </Card>

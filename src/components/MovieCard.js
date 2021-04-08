@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { movies$ } from "../movies.js";
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import '../styles/MovieCard.css'
 
 export const MovieCard = () => {
 
@@ -15,11 +16,11 @@ export const MovieCard = () => {
     return (
         <div>
             <h1> Voici la liste des films </h1>
-            <div>
+            <div className="responsive-cards">
                 
                     {movies.map(data => {
                         return (
-                            <Card style={{ width: '18rem' }} key={data.id}>
+                            <Card style={{ width: '18rem' }} key={data.id} className="mb-4">
                                 <Card.Body>
                                 <Card.Title> {data.title}</Card.Title>
                                 <Card.Text>

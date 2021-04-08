@@ -1,0 +1,9 @@
+.banner {
+    background-image: url('../assets/banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 700px;
+    width: 100%;
+}

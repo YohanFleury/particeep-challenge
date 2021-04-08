@@ -1,13 +1,15 @@
 import './App.css';
 import { MovieCard } from "./components/MovieCard";
-import { Banner } from "./components/Banner";
-
+import store from './redux/reducers/store'
+import { Provider } from 'react-redux'
 function App() {
   return (
-    <div>
-      <Banner />
+    <Provider store={ store }>
+      <div>
       <MovieCard />
-    </div>
+      </div>
+    </Provider>
+    
   );
 }
 

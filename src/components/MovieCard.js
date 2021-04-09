@@ -44,7 +44,7 @@ export const MovieCard = () => {
                     Catégorie : {data.category}
                 </Card.Text>
                 </div>
-                <div className="d-flex justify-content-center mt-3 mb-4 p-3">
+                <div className="d-flex justify-content-between mt-3 mb-4 p-3">
                     <LikeButton onClick={() => dispatch(addLike(data.id))} />
                     <DislikeButton onClick={() => dispatch(addDislike(data.id))} />
                 </div>

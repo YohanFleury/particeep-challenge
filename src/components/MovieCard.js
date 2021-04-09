@@ -32,17 +32,19 @@ export const MovieCard = () => {
     .slice(pagesVisited, pagesVisited + filmsPerPage)
     .map(data => {
         return (
-            <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white', border: 'none' }} key={data.id} className="mb-4">
+            <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white', border: 'none' }} key={data.id} className="mb-5">
                 <Card.Img variant="top" src={data.img} className="img-cards" />
                 <Card.Body>
                 <div className="d-flex justify-content-end"> 
                 <DeleteButton onClick={() => dispatch(deleteCard(data.id))} />
                 </div>
+                <div className="title-category">
                 <Card.Title> {data.title} </Card.Title>
                 <Card.Text>
                     Catégorie : {data.category}
                 </Card.Text>
-                <div className="d-flex mb-5">
+                </div>
+                <div className="d-flex justify-content-center mt-3 mb-4 p-3">
                     <LikeButton onClick={() => dispatch(addLike(data.id))} />
                     <DislikeButton onClick={() => dispatch(addDislike(data.id))} />
                 </div>

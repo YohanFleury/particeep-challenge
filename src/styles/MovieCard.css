@@ -21,6 +21,13 @@
     color: white;
     display: flex;
     justify-content: center;
-    margin-bottom: 6rem;
-    padding: 5rem;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    font-size: 3rem;
+}
+
+.title-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

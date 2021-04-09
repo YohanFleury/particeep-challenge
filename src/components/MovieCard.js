@@ -5,8 +5,10 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import '../styles/MovieCard.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { addLike, addDislike } from '../redux/actions/actionLikes'
+import { deleteCard } from "../redux/actions/actionCards";
 import { LikeButton } from './LikeButton'
 import { DislikeButton } from './DislikeButton'
+import { DeleteButton } from "./DeleteButton";
 
 export const MovieCard = () => {
     
@@ -32,6 +34,9 @@ export const MovieCard = () => {
                         return (
                             <Card style={{ width: '18rem' }} key={data.id} className="mb-4">
                                 <Card.Body>
+                                <div className="d-flex justify-content-end"> 
+                                <DeleteButton onClick={() => dispatch(deleteCard(data.id))} />
+                                </div>
                                 <Card.Title> {data.title} </Card.Title>
                                 <Card.Text>
                                     Catégorie : {data.category}

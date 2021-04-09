@@ -1,16 +1,9 @@
-import { createStore, combineReducers } from "redux";
-import {reducerLikes} from '../reducers/reducerLikes'
-import {reducerCards} from '../reducers/reducerCards'
+import { createStore } from "redux";
+import { reducerCard } from '../reducers/reducerCard'
 import { listeFilms } from "../../test";
 
 
-
-const rootReducer = combineReducers({
-    likes: reducerLikes,
-    cards: reducerCards
-})
-
-const store = createStore(reducerLikes, listeFilms)
+const store = createStore(reducerCard, listeFilms)
 
 export default store
 

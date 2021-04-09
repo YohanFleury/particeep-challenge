@@ -32,7 +32,7 @@ export const MovieCard = () => {
     .slice(pagesVisited, pagesVisited + filmsPerPage)
     .map(data => {
         return (
-            <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white' }} key={data.id} className="mb-4">
+            <Card style={{ width: '18rem', backgroundColor: 'black', color: 'white', border: 'none' }} key={data.id} className="mb-4">
                 <Card.Img variant="top" src={data.img} className="img-cards" />
                 <Card.Body>
                 <div className="d-flex justify-content-end"> 
@@ -71,13 +71,14 @@ export const MovieCard = () => {
     })
 
     return (
-        <div className="test">
-            <h1> Voici la liste des films </h1>
+        <div className="bgimage">
+            <div className="mb-4">
+            <h1 className="title-component"> Voici la liste des films </h1>
             <div className="d-flex justify-content-center mb-3">
                 <DropdownButton id="dropdown-basic-button" title={categoryChoosen}>
                     {displayCategories}
                 </DropdownButton>
-            </div>
+            
                         
             <ReactPaginate
                 previousLabel={"Previous"}
@@ -89,10 +90,11 @@ export const MovieCard = () => {
                 nextLinkClassName={"next-btn"}
                 activeClassName={"paginationActive"}
             />
+            </div>
             <div className="responsive-cards">
                 {displayFilms}
             </div>
-            
+            </div>
         </div>
         
     )

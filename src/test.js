@@ -4,7 +4,8 @@ export const listeFilms = [
       title: 'Oceans 8',
       category: 'Comedy',
       likes: 4,
-      dislikes: 1
+      dislikes: 1,
+      img: "https://m.media-amazon.com/images/M/MV5BMjQ4YzMyY2UtOTE0Yy00M2Y5LTkxMzAtZTVmNWZlOGRiZjQ0XkEyXkFqcGdeQXVyNTE5ODkzNjk@._V1_SX300.jpg"
     }, {
       id: '2',
       title: 'Midnight Sun',
@@ -24,7 +25,8 @@ export const listeFilms = [
       title: 'Sans un bruit',
       category: 'Thriller',
       likes: 6,
-      dislikes: 6
+      dislikes: 6,
+      img: "https://m.media-amazon.com/images/M/MV5BNWQ1YzJhNzMtMGI2YS00MmYxLWFiNGMtOTIxMzNkNzAxODU1XkEyXkFqcGdeQXVyOTA1MjYzMjI@._V1_SX300.jpg"
     }, {
       id: '5',
       title: 'Creed II',
@@ -51,7 +53,8 @@ export const listeFilms = [
       title: 'Seven',
       category: 'Thriller',
       likes: 2,
-      dislikes: 1
+      dislikes: 1,
+      img: "https://m.media-amazon.com/images/M/MV5BOWE4ZDdhNmMtNzE5ZC00NzExLTlhNGMtY2ZhYjYzODEzODA1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
     }, {
       id: '9',
       title: 'Inception',

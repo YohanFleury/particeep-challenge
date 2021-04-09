@@ -8,6 +8,18 @@
     height: 300px;
 }
 
-.test {
+.bgimage {
     background-image: url(../assets/bg-image.jpg);
+}
+
+.borders {
+    border-radius: 70%;
+    border-color: #FA2B80;
+}
+
+.title-component {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
 }

@@ -24,8 +24,8 @@ export const MovieCard = () => {
     // PAGINATION
 
     const [pageNumber, setPageNumber] = useState(0)
-
-    const filmsPerPage = 4
+    const [filmsPage, setFilmsPage] = useState(4)
+    const filmsPerPage = filmsPage
     const pagesVisited = pageNumber * filmsPerPage
 
     const displayFilms = films
@@ -66,22 +66,25 @@ export const MovieCard = () => {
 
     // CATEGORIES
 
-    const [categoryChoosen, setCategoryChoosen] = useState("Filtrer par catégorie")
-
     const displayCategories = films.map(type => {
         return (<Dropdown.Item onClick={ () => dispatch(filterCategory(type.category)) }> {type.category} </Dropdown.Item>)
     })
 
     return (
         <div className="bgimage">
-            <div className="">
             <h1 className="title-component"> Voici la liste des films </h1>
-            <div className="d-flex justify-content-center mb-3">
-                <DropdownButton variant="success" id="dropdown-basic-button" title={categoryChoosen}>
+            <div className="d-flex justify-content-start p-1">
+                <DropdownButton variant="btn-outline-dark text-white" id="dropdown-basic-button" title="Filtrer par catégorie">
                     {displayCategories}
                 </DropdownButton>
             
-                        
+                <DropdownButton id="dropdown-basic-button" title="Films par page" variant="btn-outline text-white">
+                    <Dropdown.Item onClick={ () => setFilmsPage(4)}> 4 </Dropdown.Item>
+                    <Dropdown.Item onClick={ () => setFilmsPage(8)}> 8 </Dropdown.Item>
+                    <Dropdown.Item onClick={ () => setFilmsPage(12)}> 12 </Dropdown.Item>
+                </DropdownButton>
+            </div>
+            <div className="d-flex justify-content-end p-3">
             <ReactPaginate
                 previousLabel={"Previous"}
                 nextLabel={"Next"}
@@ -95,7 +98,6 @@ export const MovieCard = () => {
             </div>
             <div className="responsive-cards">
                 {displayFilms}
-            </div>
             </div>
         </div>
         

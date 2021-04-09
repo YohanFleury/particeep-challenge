@@ -4,47 +4,20 @@
     list-style: none;
     display: flex;
     justify-content: flex-end;
-<<<<<<< HEAD
-=======
     color: blanchedalmond;
->>>>>>> main
 }
 
 .pagination-btns a {
     padding: 10px;
     margin: 8px;
     border-radius: 5px;
-<<<<<<< HEAD
-    border: 1px solid green;
-    color: green;
-=======
     border: 1px solid #FA2B80;
     color: #FA2B80;
->>>>>>> main
     cursor: pointer;
 }
 
 .pagination-btns a:hover {
     color: white;
-<<<<<<< HEAD
-    background-color: green;
-    text-decoration: none;
-}
-
-
-
-.next-btn {
-
-}
-
-.paginationDisabled {
-
-}
-
-.paginationActive a {
-    color: white;
-    background-color: green;
-=======
     background-color: #FA2B80;
     text-decoration: none;
 }
@@ -52,5 +25,4 @@
 .paginationActive a {
     color: white;
     background-color: #FA2B80;
->>>>>>> main
 }

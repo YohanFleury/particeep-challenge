@@ -9,3 +9,8 @@
     height: 50px;
     cursor: pointer;
 }
+
+.btn-primary.custom-btn {
+	background-color: #000;
+	border-color: #000;
+}

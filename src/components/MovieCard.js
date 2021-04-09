@@ -48,7 +48,7 @@ export const MovieCard = () => {
                     <LikeButton onClick={() => dispatch(addLike(data.id))} />
                     <DislikeButton onClick={() => dispatch(addDislike(data.id))} />
                 </div>
-                <ProgressBar now={(data.likes / (data.likes + data.dislikes)) *100 } variant="flat" />
+                <ProgressBar now={(data.likes / (data.likes + data.dislikes)) *100 } variant="success" />
                 <div className="d-flex justify-content-between mt-2">
                     <Card.Text> Likes : {data.likes} </Card.Text>
                     <Card.Text> Dislikes : {data.dislikes} </Card.Text>
@@ -77,7 +77,7 @@ export const MovieCard = () => {
             <div className="">
             <h1 className="title-component"> Voici la liste des films </h1>
             <div className="d-flex justify-content-center mb-3">
-                <DropdownButton id="dropdown-basic-button" title={categoryChoosen}>
+                <DropdownButton variant="success" id="dropdown-basic-button" title={categoryChoosen}>
                     {displayCategories}
                 </DropdownButton>
             

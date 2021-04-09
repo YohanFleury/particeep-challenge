@@ -32,7 +32,6 @@
     align-items: center;
 }
 
-.flat {
-    background-color: purple;
-    color: white;
-  }
+.btn-pink {
+    background-color: #FA2B80;
+}

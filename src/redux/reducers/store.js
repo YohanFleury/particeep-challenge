@@ -1,7 +1,6 @@
 import { createStore } from "redux";
 import { reducerCard } from '../reducers/reducerCard'
-import { listeFilms } from "../../test";
-
+import { listeFilms } from "../../movies2";
 
 const store = createStore(reducerCard, listeFilms)
 

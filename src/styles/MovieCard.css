@@ -31,3 +31,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+.flat {
+    background-color: purple;
+    color: white;
+  }

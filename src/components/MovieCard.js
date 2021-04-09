@@ -48,7 +48,7 @@ export const MovieCard = () => {
                     <LikeButton onClick={() => dispatch(addLike(data.id))} />
                     <DislikeButton onClick={() => dispatch(addDislike(data.id))} />
                 </div>
-                <ProgressBar now={(data.likes / (data.likes + data.dislikes)) *100 } variant="success" />
+                <ProgressBar now={(data.likes / (data.likes + data.dislikes)) *100 } variant="flat" />
                 <div className="d-flex justify-content-between mt-2">
                     <Card.Text> Likes : {data.likes} </Card.Text>
                     <Card.Text> Dislikes : {data.dislikes} </Card.Text>

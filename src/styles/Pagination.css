@@ -1,0 +1,27 @@
+.pagination-btns {
+    width: 80%;
+    height: 40%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pagination-btns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid green;
+    color: green;
+    cursor: pointer;
+}
+
+.pagination-btns a:hover {
+    color: white;
+    background-color: green;
+    text-decoration: none;
+}
+
+.paginationActive a {
+    color: white;
+    background-color: green;
+}

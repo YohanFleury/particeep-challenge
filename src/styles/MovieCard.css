@@ -3,3 +3,11 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.img-cards {
+    height: 300px;
+}
+
+.test {
+    background-image: url(../assets/bg-image.jpg);
+}

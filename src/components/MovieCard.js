@@ -72,7 +72,7 @@ export const MovieCard = () => {
 
     return (
         <div className="bgimage">
-            <div className="mb-4">
+            <div className="">
             <h1 className="title-component"> Voici la liste des films </h1>
             <div className="d-flex justify-content-center mb-3">
                 <DropdownButton id="dropdown-basic-button" title={categoryChoosen}>

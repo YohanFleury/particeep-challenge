@@ -19,9 +19,9 @@ export const MovieCard = () => {
     const films = useSelector(state => state)
     const dispatch = useDispatch()
     
-    const [categorySelected, setCategory] = useState('Tous')
+    const [categorySelected, setCategory] = useState('Tous les films')
 
-    const filmsToDisplay = categorySelected === 'Tous' ? films 
+    const filmsToDisplay = categorySelected === 'Tous les films' ? films 
     : films.filter(movie => movie.category === categorySelected)
 
     // PAGINATION
@@ -72,6 +72,7 @@ export const MovieCard = () => {
     const allCategories = films
         .map(film => film.category)
         .filter((value, index, self) => self.indexOf(value) === index)
+        allCategories.unshift('Tous les films')
 
     const displayCategories = allCategories.map(c => {
         return (<Dropdown.Item onClick={() => setCategory(c)}> {c} </Dropdown.Item>)

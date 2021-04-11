@@ -1,12 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import { movies$ } from "../movies.js";
+import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import '../styles/MovieCard.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { addLike, addDislike } from '../redux/actions/actionLikes'
 import { deleteCard } from "../redux/actions/actionCards";
-import { filterCategory } from "../redux/actions/actionCategories"
 import { LikeButton } from './LikeButton'
 import { DislikeButton } from './DislikeButton'
 import { DeleteButton } from "./DeleteButton";
@@ -21,6 +19,11 @@ export const MovieCard = () => {
     const films = useSelector(state => state)
     const dispatch = useDispatch()
     
+    const [categorySelected, setCategory] = useState('Tous')
+
+    const filmsToDisplay = categorySelected === 'Tous' ? films 
+    : films.filter(movie => movie.category === categorySelected)
+
     // PAGINATION
 
     const [pageNumber, setPageNumber] = useState(0)
@@ -28,7 +31,7 @@ export const MovieCard = () => {
     const filmsPerPage = filmsPage
     const pagesVisited = pageNumber * filmsPerPage
 
-    const displayFilms = films
+    const displayFilms = filmsToDisplay
     .slice(pagesVisited, pagesVisited + filmsPerPage)
     .map(data => {
         return (
@@ -59,15 +62,19 @@ export const MovieCard = () => {
         )
     })
 
-    const pageCount = Math.ceil(films.length / filmsPerPage)
+    const pageCount = Math.ceil(filmsToDisplay.length / filmsPerPage)
     const changePage = ({ selected }) => {
         setPageNumber(selected)
     }
 
     // CATEGORIES
 
-    const displayCategories = films.map(type => {
-        return (<Dropdown.Item onClick={ () => dispatch(filterCategory(type.category)) }> {type.category} </Dropdown.Item>)
+    const allCategories = films
+        .map(film => film.category)
+        .filter((value, index, self) => self.indexOf(value) === index)
+
+    const displayCategories = allCategories.map(c => {
+        return (<Dropdown.Item onClick={() => setCategory(c)}> {c} </Dropdown.Item>)
     })
 
     return (

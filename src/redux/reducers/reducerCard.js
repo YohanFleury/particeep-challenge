@@ -7,11 +7,6 @@ const helperDeleteCard = (state, id) => {
     return cards
 }
 
-const helperFilterCategory = (state, categoryChoosen) => {
-    const filteredMovies = state.filter(movie => movie.category === categoryChoosen)
-    return filteredMovies
-}
-
 export const reducerCard = (state=[], action) => {
     switch (action.type) {
         case ADD_LIKE:
@@ -38,11 +33,6 @@ export const reducerCard = (state=[], action) => {
         state = helperDeleteCard(state, action.payload)
         return state
     
-        case FILTER_CATEGORY:
-        state = helperFilterCategory(state, action.payload)
-        return state
-
-
         default: return state
     }
 }
